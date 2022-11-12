@@ -1,19 +1,13 @@
-# revision 33288
-# category Package
-# catalog-ctan /macros/latex/contrib/fifo-stack
-# catalog-date 2014-04-08 11:20:21 +0200
-# catalog-license lppl
-# catalog-version 1.0
 Name:		texlive-fifo-stack
-Version:	1.0
-Release:	5
+Version:	33288
+Release:	1
 Summary:	FIFO and stack implementation for package writers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fifo-stack
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fifo-stack.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fifo-stack.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fifo-stack.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fifo-stack.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fifo-stack.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fifo-stack.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ adds the ability to \FSUnshift and \FSShift from the the
 bottom(front) of the FIFO/Stack.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -48,7 +42,8 @@ bottom(front) of the FIFO/Stack.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
