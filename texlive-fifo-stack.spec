@@ -1,6 +1,6 @@
 Name:		texlive-fifo-stack
 Version:	33288
-Release:	1
+Release:	2
 Summary:	FIFO and stack implementation for package writers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fifo-stack
