@@ -3,7 +3,7 @@ Version:	33288
 Release:	2
 Summary:	FIFO and stack implementation for package writers
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fifo-stack
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fifo-stack
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fifo-stack.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fifo-stack.doc.r%{version}.tar.xz
